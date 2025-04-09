@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 
 const port = process.env.PORT || 4000;
-const hostName = '127.0.0.1';
 
 const server = http.createServer((req, res) => {
     //Routes
@@ -32,6 +31,6 @@ const server = http.createServer((req, res) => {
     handleReadFile(filePath, statusCode);
 });
 
-server.listen(port, hostName, () => {
-    console.log(`Server running successfully at http://${hostName}:${port}`);
+server.listen(port, () => {
+    console.log(`Server running successfully at http://localhost:${port}`);
 });
